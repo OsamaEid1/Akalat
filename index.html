@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>home</title>
+        <meta name="description" content="">
+        <meta name="description" content="Culinary experts.
+        Here you will find the best food and its recipes in every category and 
+        the specialties of the most famous countries.Evrything is free,
+        visit our website now.">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="css/all.min.css"> <!-- declare file of font icon -->
+
+    </head>
+    <body>
+        <!-- nav bar -->
+          <ul class="nav">
+              <li>
+              <div id="icon" onclick="changestyle()">
+                <i class="fas fa-bars fa-2x"></i>
+              </div>
+                </li>
+              <div id="cancel" style="display: none; cursor: pointer;" onclick="changestyle2()">
+                <i class="fas fa-window-close"></i>
+              </div>
+              </li>
+              <li class="nav"><a href="index.html">Home</a></li>
+              <li class="nav"><a href="signin.html">Sign in</a></li>
+              <li class="nav"><a href="signup.html">Sign up</a></li>
+              <li class="nav"><a href="contactus.html">Contact us</a></li>
+              <li class="nav"><a href="aboutus.html">About us</a></li>
+          </ul>
+
+      <div id="sidebar">
+          <ul class="menu" id="menu" style="display:none;">
+              <h3>Akalat</h3>
+              <li><div><a href="hotfood.html">Hot food</a></div></li>
+              <li><div><a href="backedgoods.html">Backed goods</a></div></li>
+              <li><div><a href="sweets.html">Sweets</a></div></li>
+              <li><div><a href="healthy.html">Healthy food</a></div></li>
+              <li><div><a href="mostfood.html">Most famous food in every country</a></div></li>
+              <li><div><a href="mostprogram.html">Most Famous cooking Programs</a></div></li>
+          </ul>
+      </div>
+      <!-- End nav bar -->
+      
+      <!-- ----------------------------------------------------------- -->
+        <div class="container">
+            <!-- <img class="welcomeimg" src="images/826921.jpg" alt="image can not found"> -->
+            <div class="welcomeimg" title="slid-show">
+              <img class="mySlides" src="images/johnathan-macedo-4NQEvxW2_4w-unsplash (1).jpg">
+              <img class="mySlides" src="images/sebastian-coman-photography-cQbOSRpElxw-unsplash.jpg">
+              <img class="mySlides" src="images/peter-dawn-mM-L0yx5LcQ-unsplash.jpg">
+              <img class="mySlides" src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+              <img class="mySlides" src="images/louis-hansel-R6_o_PPAS94-unsplash.jpg">
+            </div>
+                        <h3>Osama eid ahmed..ID=202000109</h3>
+
+            <div class="content" >
+                <h1 class="cat">Categories:</h1>
+                    <div class="hot"onclick="hot()">
+                         <p>
+                             <b>hot food:</b><br>
+                                 Learn the most popular types of hot foods and how to make them..
+                        </p>
+                    </div>
+<!-------------------------------------------------------------------------------> 
+                     <div class="sweets" onclick="sweets()">
+                         <p>
+                             <b>sweets:</b><br>
+                                Learn the most popular types of sweets and how to make them..
+                        </p>
+                    </div>
+<!-------------------------------------------------------------------------------> 
+                    <div class="baked"onclick="baked()">
+                        <p>
+                            <b>baked goods:</b><br>
+                               Learn the most popular types of baked goods and how to make them..
+                        </p>
+                        
+                    </div>
+<!-------------------------------------------------------------------------------> 
+                    <div class="healthy"onclick="healthy()">
+                        <p>
+                          <b>Healthy:</b><br>
+                             Learn the most popular types of sandwiches and how to make them..
+                        </p>
+                    </div>
+<!-------------------------------------------------------------------------------> 
+                    <div class="mostFamousPrograms" onclick="mostFamousPrograms()">
+                        <p>
+                            <b>The most famous cooking programs:</b><br>
+                                Click to know about The most famous cooking programs in the Arab world..
+                        </p>
+                    </div>
+<!-------------------------------------------------------------------------------> 
+                    <div class="mostFood"onclick="mostFood()">
+                        <p>
+                           <b>The most famous food in every country:</b><br>
+                                Click to know about The most famous food in the most famous country in cooking..
+                        </p>
+                    </div>
+<!-------------------------------------------------------------------------------> 
+            </div>
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        </div>
+        <!-- ------------------------------------------- -->
+            <!-- ------------------------------------------------ -->
+    <!-- Start Footer -->
+    <!-- <div class="footer">
+      <hr>
+        <div class="icons_section">
+            <ul class="icons">
+                <li title="Our page on facebook"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li> 
+                <li title="Our page on twitter"><a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a></li>
+                <li title="Our page on instagram"><a href="https://instagram.com"><i class="fab fa-instagram-square"></i></a></li>
+                <li title="Our page on youtube"><a href="https://youtube.com"><i class="fab fa-youtube-square"></i></a></li>
+            </ul>
+        </div>
+        <hr>
+  <!-- ------------------------------------------------------------- -->
+      <!-- <div class="links_of_content">
+            <ul class="links">
+              <span class="cat">Categories:</span>
+                <li><a href="index.html">home</a></li>
+                <li><a href="hotfood.html">hot foods</a></li>
+                <li><a href=".html">sweets</a></li>
+                <li><a href="backedgoods.html">baked</a></li>
+                <li><a href="healthy.html">healthy foods</a></li>
+                <li><a href="mostfood.html">the most famous cooking programs</a></li>
+                <li><a href="index.html">the most famous food in every country</a></li>
+            </ul>
+        </div>
+    <!-- --------------------------------------------------------- ----->
+    
+    <!-- <div class="links_of_our_content">
+      <ul class="links">
+          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+  </div>
+  <hr> -->
+    <!-- ------------------------------------------------------------ -->
+       <!-- <p class="cr">Copyright &copy; 2021 <span>akalat</span> All Right Reserved.</p> -->
+    <!-- ------------------------------------------------------------ -->
+    <!-- </div> -->
+<!-- start script code -->
+        <script>
+                  function changestyle(){
+                document.getElementById("menu").style.display="block";
+                document.getElementById("cancel").style.display="block";
+          }
+          function changestyle2(){
+                document.getElementById("menu").style.display="none";
+                document.getElementById("cancel").style.display="none";
+              // document.getElementById("side bar").style.f="50px";
+          }
+      //--------------------------------------------------------- 
+          function hot(){
+                window.location="hotfood.html";
+            }
+          function sweets(){
+                window.location="sweets.html";
+            }
+          function baked(){
+                window.location="backedgoods.html";
+            }
+              function healthy(){
+                window.location="healthy.html";
+            }
+              function mostFood(){
+                window.location="mostfood.html";
+            }
+          function mostFamousPrograms(){
+                window.location="mostprogram.html";
+            }
+         //Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+// ---------------------------------------------------
+//slider:
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2300); // Change image every 2.3 seconds
+}
+        </script>
+    </body>
+</html> 

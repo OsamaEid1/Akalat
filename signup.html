@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUpForm</title>
+     <link rel="stylesheet" href="css/signup.css"> 
+    <link rel="stylesheet" href="css/leon.css">
+        <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" 
+    rel="stylesheet">  
+    
+            <link rel="stylesheet" href="css/all.min.css"> <!-- declare file of font icon -->
+ 
+</head>
+<body>
+<!-- nav bar -->
+          <ul class="nav">
+              <li>
+              <div id="icon" onclick="changestyle()">
+                <i class="fas fa-bars fa-2x"></i>
+              </div>
+                </li>
+              <div id="cancel" style="display: none; cursor: pointer;" onclick="changestyle2()">
+                <i class="fas fa-window-close"></i>
+              </div>
+              </li>
+              <li class="nav"><a href="index.html">Home</a></li>
+              <li class="nav"><a href="signin.html">Sign in</a></li>
+              <li class="nav"><a href="signup.html">Sign up</a></li>
+              <li class="nav"><a href="contactus.html">Contact us</a></li>
+              <li class="nav"><a href="aboutus.html">About us</a></li>
+          </ul>
+
+      <div id="sidebar">
+          <ul class="menu" id="menu" style="display:none;">
+              <h3>Akalat</h3>
+              <li><div><a href="hotfood.html">Hot food</a></div></li>
+              <li><div><a href="backedgoods.html">Backed goods</a></div></li>
+              <li><div><a href="sweets.html">Sweets</a></div></li>
+              <li><div><a href="healthy.html">Healthy food</a></div></li>
+              <li><div><a href="mostfood.html">Most famous food in every country</a></div></li>
+              <li><div><a href="mostprogram.html">Most Famous cooking Programs</a></div></li>
+          </ul>
+      </div>
+      <!-- End nav bar -->
+                                           
+
+    <div class="container">
+       
+        <div class="header">
+            <h2>Sign Up Now</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form-control">
+               
+                <label>User Name</label>
+                <input type="text" name="user name" id="username"  placeholder="Enter Your Name">          
+            </div>
+
+            <div class="form-control">
+                <label>Email</label>
+                <input type="email" name="email" id="email" required placeholder="Write A Valid Email">                              
+            </div>
+
+            <div class="form-control">
+                <label>Password</label>
+                <input type="password" name="password" id="password"  placeholder="Write A Complex Password" minlength="9">              
+            </div>
+
+            <div class="form-control">
+                <label>Check Password</label>
+                <input type="password" name="check password" id="password2"  placeholder="Repeat The Password">                            
+            </div>
+            <button onclick="check()">submit</button>
+            <h5 style="color: black ">zeinab mohamed metwaly..ID=202000366</h5>
+        </form>
+    </div> 
+                <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <script >
+     //Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+        function check(){
+
+  if(username.value === '' || username.value == null ){
+    alert("Please enter user name");
+}
+  else if(email.value === '' ){
+    alert("Please enter email");
+}
+  else if(password.value === '' ){
+    alert("Please enter your a passowrd")
+}
+  else if(password2.value === '' ){
+    alert("Please confirm passowrd");
+}
+    else if (password.value != password2.value){
+         alert("Enter the same password");
+       }
+    else {
+       window.location="index.html";
+    }
+       
+        }
+                        function changestyle(){
+                document.getElementById("menu").style.display="block";
+                document.getElementById("cancel").style.display="block";
+          }
+          function changestyle2(){
+                document.getElementById("menu").style.display="none";
+                document.getElementById("cancel").style.display="none";
+              // document.getElementById("side bar").style.f="50px";
+          }
+    </script>  
+  </body>
+</html>

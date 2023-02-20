@@ -1,0 +1,489 @@
+ <!DOCTYPE html>
+<html>
+ <head>
+<link rel="stylesheet" href="css/all.min.css"> <!-- declare file of font icon -->
+ <style>
+ :root{
+--words: goldenrod;
+--special: #ff9800;
+--inputcolor: #eee;
+--bordercolor: #d20100;
+}
+  /* navbar */
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    width: fit-content;
+}
+.nav li {
+   float: left;
+    font-size:19px;
+    margin: 0px 0px;
+    padding:2px 0px;
+    border-radius: 0px;
+    color: black;
+}
+.nav li a {
+      display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:sans-serif;
+    margin:0px;
+}
+li a:hover:not(.active) {
+    background-color: orange;
+}
+.active {
+    background-color: #04AA6D;
+}
+/*side bar*/
+
+.menu{
+    list-style:none;
+    padding-left: 0px;
+    width: fit-content; 
+}
+.menu h3{
+   background-color: var(--special);
+    color: black;
+    padding:10px;
+    cursor:pointer;
+    text-align:center;
+}
+.menu li{
+    padding:20px 1px;
+    text-align: center;
+    width: 140px;
+
+}
+.menu a{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;   
+    text-align: center;
+    font-family: cursive;
+    margin-left: 0px;
+}
+.menu li :hover{
+    background-color:#ffa500;
+    text-decoration: none;
+}
+.backed{
+    position: relative;
+    right: 18px
+}
+#sidebar{
+    background: rgb(128 128 128 / 20%);
+    width: fit-content;
+    position: absolute;
+    z-index: 99;
+    margin-left: 9px;
+    border-radius: 9px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border-bottom: 3px groove var(--bordercolor);
+}
+#icon,
+#cancel{
+    cursor:pointer;
+    margin:0px 10px;
+}
+#cancel{
+    color: black;
+    font-size: 30px;
+}
+#icon:hover{
+    color: var(--special);
+}
+#cancel:hover{
+    color: var(--special);
+}
+/* end nav bar */
+#myBtn {
+    display: none;
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    
+    background-color: black;
+    color: white; 
+    cursor: pointer; 
+    padding: 15px;
+    border-color: var(--bordercolor);
+    border-radius: 10px; 
+    font-size: 10px; 
+    opacity: 0.5;
+  }
+  
+  #myBtn:hover {
+    background-color: var(--bordercolor); 
+    opacity: 1;
+  }
+  /* end btn */
+   div.relative {
+  position: relative;
+  left: 100px;
+  right: 300px;
+ background-color: black;
+ color:rgb(255, 255, 54);
+} 
+
+.parent{
+background-color: black;
+ width:600px;
+ margin:auto
+}
+.continer{
+ width:600px;
+ margin:auto;
+background-color: black;
+}
+
+h1 {
+  background-color: black;
+  color: orange;
+  font-family: "Audiowide", sans-serif;
+
+} 
+
+
+h2 {
+  background-color: black;
+  color: orange;
+font-family:Serif;
+font-size:25px;
+}
+
+h3 {
+  background-color: black;
+  color: orange;
+font-family:Serif;
+ font-size:25px;
+}
+
+h4{
+  background-color: black;
+  color: orange;
+font-family:Serif;
+ font-size:25px;
+}
+
+
+.p4{
+  background-color: black;
+  color:rgb(255, 255, 54);
+ font-family:Sans-serif;
+
+
+
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 9999;
+  padding: 6px;
+  background: #ffd;
+  border: 1px #886 solid;
+  border-radius: 5px;
+}
+
+ p {
+  position: relative;
+  left: 100px;
+  right: 300px;
+  line-height: 2;
+ font-family:Sans-serif;
+ font-size: 20px;
+color:orange;
+}
+.p4 { 
+  position: relative;
+  left: 100px;
+  right: 300px;
+ font-size:10px;
+ font-family:Sans-serif;
+}
+
+.p2 {
+relative {
+  position: relative;
+  left: 100px;
+  right: 300px;
+color:rgb(255, 255, 0 );
+  font-family:courier;
+ font-size:15px;
+
+}
+
+ul{
+  list-style-type: square;
+}
+
+button{
+  background-color: yallow
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+ </style> 
+ <title>link </title>
+ </head>
+<body style="background-color:black;"> >
+<!-- nav bar -->
+          <ul class="nav">
+              <li>
+              <div id="icon"onclick="changestyle()">
+                <i class="fas fa-bars fa-2x"></i>
+              </div>
+                </li>
+              <div id="cancel" style="display: none; cursor: pointer;" onclick="changestyle2()">
+                <i class="fas fa-window-close"></i>
+              </div>
+              </li>
+              <li class="nav"><a href="index.html">Home</a></li>
+              <li class="nav"><a href="signin.html">Sign in</a></li>
+              <li class="nav"><a href="signup.html">Sign up</a></li>
+              <li class="nav"><a href="contactus.html">Contact us</a></li>
+              <li class="nav"><a href="aboutus.html">About us</a></li>
+          </ul>
+
+      <div id="sidebar">
+          <ul class="menu" id="menu" style="display:none;">
+              <h3>Akalat</h3>
+              <li><div><a href="hotfood.html">Hot food</a></div></li>
+              <li><div><a href="backedgoods.html">Backed goods</a></div></li>
+              <li><div><a href="sweets.html">Sweets</a></div></li>
+              <li><div><a href="healthy.html">Healthy food</a></div></li>
+              <li><div><a href="mostfood.html">Most famous food in every country</a></div></li>
+              <li><div><a href="mostprogram.html">Most famous cooking Programs</a></div></li>
+          </ul>
+      </div>
+      <!-- End nav bar -->
+      <!-- ----------------------------------------------------------- -->
+      <h3>Hazem hany..ID=202000252</h3>
+<div class="relative">
+<div class="continer">
+
+  <h1 style="text-align:center;border:1px solid ;">  <ins>Incredible Desserts</ins> </h1>
+<img src="images/featured-3.jpg"style="width:900px;height:500px;position: relative;left: 100px;right: 300px;">
+  <h2 style="text-align:center;"> <strong><ins>Incredible Desserts</ins></strong> </h2>
+
+<p1 position: relative;left: 100px;right: 300px;>
+
+Egyptian and regional desserts offer an endless variety �whether you like them syrupy sweet or</br>
+<br>  with orange blossom water.This post is sponsored by InterContinental Cairo Semiramis.</br>
+<br> Egypt has a huge array of sweetsto be savored over the best strong coffee or at</br>
+<br> its numerous bustling cafes.Egyptian and local desserts are especially popular during Ramadan, when even</br>
+<br>families on a budget don�t hesitate to splurge and put the finest on their tables.   </br>
+<br>There are long lines at the pastry shops downtown as everyone stocks up on their goodies. Iftar guests </br>
+<br>often bring boxes of sweets for their hosts.But where can you start sampling amid such a wide variety?</br>
+<br>I head to the Cafe Corniche at InterContinentalCairo Semiramis Cairo Semiramisand spend a few glorious days tasting</br>
+<br> all the traditional desserts that Egypt and the region has to offer.</br>
+<br>And I talk with the team of cooks about what goes into making these sweets,and the traditions behind the dishes.</br>
+<br>The Cafe Corniche is tucked into a quiet corner<br> we will talk about the best sweets in Egypt</p>
+</p1>
+
+<h3><ins>1. BASBOUSA </ins></h3>
+
+<img src="images/1b-basbousa.jpg"style="width:900px;height:500px;relative;left: 100px;right: 300px;">
+<br><button style="background-color:orange; border: none;type="button"class="but2"onclick="myFunction4()">The main ingredients</button></br>
+<div id="a4">
+  <ul >
+  <li> semolina</li>
+  <li>sugar</li>
+  <li> ghee</li>
+  <li>3 eggs</li>
+  <li> milk</li>
+  <li>Vanilla sprinkle. </li>
+</ul>
+</div>
+
+
+
+<p2  style="text-align:center;">
+<br>This famous semolina sweet cake is likely what comes to mind when you think of Middle Eastern sweets. Rich, heavy and syrupy, basbousa is a decadent</br>
+<br> little square that feels like pure sugar melting on your tongue It should be topped with a spoonful of yogurt to break that sweetness down, or paired</br>
+ <br>with bitter coffee or mint tea, says Assistant Chef Khaled Hussein at Cafe Corniche.</br>
+</p2>
+
+<p3  style="text-align:center;">
+
+ <br>� semolina, sugar, ghee and milk � make this a humble and simple dessert that�s not difficult to prepare. 
+Basbousa is one of Egypt�s most popular desserts.
+</p3>
+
+
+<h4><ins>2. BALAHELSHAM</ins></h4>
+
+<img src="images/3-balahelsham.jpg"style="width:900px;height:500px;relative;left: 100px;right: 300px;">
+<br><button style="background-color:orange; border: none;type="button"class="but2"onclick="myFunction3()">The main ingredients</button></br>
+
+<div id="a3">
+  <ul >
+  <li>Delicate cup. </li>
+  <li>Cup water.</li>
+  <li> A quarter of a cup ofoil.</li>
+  <li>3 eggs.</li>
+  <li>a small spoonful of starch;</li>
+  <li>Vanilla sprinkle. </li>
+  <li>Pinch of salt.</li>
+  <li>sorbet</li>
+</ul>
+</div>
+   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div>
+ <button style="background-color: orange; border: none; type='button' class='but2'onclick=documentById('p5').style.display=''">show</button>
+</div>
+
+
+
+<p4>
+<br>One of the most syrupy Ramadan sweets of them all, Balah el Sham are crunchy on the outside and sweet</br>
+<br>and chewy on the inside. They�re best eaten with a dash of yogurt or with strong coffee to break up that intensity of sugar.</br>
+<br>They�re also sold as a street food in Cairo during Ramadan. The food carts fill the air with the sweet and intoxicating </br>
+<br>the air with the sweet and intoxicating scent of frying dough that�s difficult to resist.</br>
+
+<h4><ins>3. ASABE ZEINAB</ins></h4>
+<img src="images/10-copy.jpg"style="width:900px;height:500px;relative;left: 100px;right: 300px;">
+
+ <br><button style="background-color:orange; border: none;type="button"class="but1"onclick="myFunction2()">The main ingredients</button></br>
+
+<div id="a2">
+
+  <ul >
+  
+  <li>Flour: a cup </li>
+  <li> Fine semolina: 2 cups</li>
+  <li>Baking powder: a tablespoon </li>
+  <li>Instant yeast: 1 teaspoon </li>
+  <li>Sugar: a tablespoon</li>
+  <li>Salt: a quarter of a teaspoon </li>
+  <li>Olive oil: 2 tablespoons </li>
+  <li>Warm water: � cup (for dough) </li>
+</ul>
+</div> 
+
+
+
+<p2>
+<br>this sweet dessert literally translates to �Zeinab�s fingers.� It�s reportedly the century-old </br>
+<br>invention of a woman of the same name.To make these Ramadan sweets, roll and then cut the pastry,</br>
+then fry it and coat it with syrup
+
+<h4><ins>4. CINNAMON-HONEY CREME BRULEE</ins></h4>
+
+<img src="images/cinnamon-honey-creme-brulee-74701-1.jpeg"style="width:900px;height:500px;relative;left: 100px;right: 300px;">
+
+ <p><span style="color:blue">blue</span> eyes.</p> 
+ 
+ <br><button style="background-color:orange; border: none;type="button"class="but1"onclick="myFunction()">The main ingredients</button></br>
+
+<div id="a">
+  <ul >
+  
+  <li>3 cups thickened cream </li>
+  <li>1 cup milk </li>
+  <li>4 cinnamon sticks </li>
+  <li>1/4 tsp salt </li>
+  <li>1/4 cup honey </li>
+  <li>1/2 cup caster sugar </li>
+  <li>9 large egg yolks </li>
+  <li>1/2 cup caster sugar, extra  </li>
+</ul>
+</div> 
+
+<p2>this desrert is the most popular in asia Are you also fond of a good cr�me br�l�e? Then you will 
+<br>probably also like this variant, spiced up with cinnamon and sweet honey. And with this recipe,your custard </br>
+will certainly not fail. Creamy pudding under the crunchy sugar coating. A tasty and fun dessert: cinnamon honey cr�me br�l�e.</p2>
+
+</pr>
+</div>
+<script>
+
+    function myFunction3(a) {
+      var x = document.getElementById("a3");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    } 
+
+
+              function changestyle(){
+                    document.getElementById("menu").style.display="block";
+                    document.getElementById("cancel").style.display="block";
+              }
+              function changestyle2(){
+                    document.getElementById("menu").style.display="none";
+                    document.getElementById("cancel").style.display="none";
+                  // document.getElementById("side bar").style.f="50px";
+              }
+          //--------------------------------------------------------- 
+    function myFunction4(a) {
+      var x = document.getElementById("a4");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+
+
+    function myFunction2() {
+      var x = document.getElementById("a2");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    } 
+
+
+    function myFunction() {
+      var x = document.getElementById("a");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    } 
+     //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    // -----------------------------------------
+</script>
+</body>
+</html>
+

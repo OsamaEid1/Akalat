@@ -1,0 +1,167 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Sign In</title>
+        <link rel="stylesheet" href="css/signin.css">
+         <link rel="stylesheet" href="css/all.min.css"> <!-- declare file of font icon -->
+    </head>
+    <body >
+<!-- nav bar -->
+          <ul class="nav">
+              <li>
+              <div id="icon"onclick="changestyle()">
+                <i class="fas fa-bars fa-2x"></i>
+              </div>
+                </li>
+              <div id="cancel" style="display: none; cursor: pointer;" onclick="changestyle2()">
+                <i class="fas fa-window-close"></i>
+              </div>
+              </li>
+              <li class="nav"><a href="index.html">Home</a></li>
+              <li class="nav"><a href="signin.html">Sign in</a></li>
+              <li class="nav"><a href="signup.html">Sign up</a></li>
+              <li class="nav"><a href="contactus.html">Contact us</a></li>
+              <li class="nav"><a href="aboutus.html">About us</a></li>
+          </ul>
+
+      <div id="sidebar">
+          <ul class="menu" id="menu" style="display:none;">
+              <h3>Akalat</h3>
+              <li><div><a href="hotfood.html">Hot food</a></div></li>
+              <li><div><a href="backedgoods.html">Backed goods</a></div></li>
+              <li><div><a href="sweets.html">Sweets</a></div></li>
+              <li><div><a href="healthy.html">Healthy food</a></div></li>
+              <li><div><a href="mostfood.html">Most famous food in every country</a></div></li>
+              <li><div><a href="mostprogram.html">Most famous cooking Programs</a></div></li>
+          </ul>
+      </div>
+      <!-- End nav bar -->
+            <h3 style="color: goldenrod">Osama eid ahmed..ID=202000109</h3>
+      <!-- ----------------------------------------------------------- -->
+        <h1 title="Welcome passage">Welcome to Akalat  <i class="fas fa-utensils" title="Icon"></i></h1>
+    <form id="form">
+      <div class="signing">
+          <p class=signin>Sign In</p>
+          <div class="userName">
+            <input class="user" id="user" placeholder="User Name" autofocus  >
+          <p id="userError" style="display: none;">Plaese enter your user name !</p>
+          </div> 
+          <!-- ----------------------- -->
+          <div class="pass">
+            <input id="pass" type="password" placeholder="Password" >
+            <p id="passError" style="display: none;">Please Enter your Password !</p><br>
+          </div>
+          <!-- ----------------------- -->
+          <input class="ch" type="checkbox" id="rem" >  
+          <label for="rem"><b>Remember Me</b></label>
+          <br>
+          <!-- ----------------------- -->
+          <button id="signinbtn" type="button" title="signin" onclick= "home()" >Sign In</button>
+          <br>
+          <!-- ----------------------- -->
+          <!-- will you choose title or hover??  -->
+          <a href="signup.html" title="signup"  data-text="Creat an account" ><b>Do not have an account?</b></a><br>
+         
+      </div> 
+    </form>
+    <!-- ------------------------------------------------
+    <!-- Start Footer -->
+    <!-- <div class="footer">
+      <hr>
+        <div class="icons_section">
+            <ul class="icons">
+                <li title="Our page on facebook"><a href="https://facebook.com"><i class="fab fa-facebook"></i></a></li> 
+                <li title="Our page on twitter"><a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a></li>
+                <li title="Our page on instagram"><a href="https://instagram.com"><i class="fab fa-instagram-square"></i></a></li>
+                <li title="Our page on youtube"><a href="https://youtube.com"><i class="fab fa-youtube-square"></i></a></li>
+            </ul>
+        </div>
+        <hr> -->
+  <!-- ------------------------------------------------------------- -->
+      <!-- <div class="links_of_content">
+            <ul class="links">
+              <span class="cat">Categories:</span>
+                <li><a href="index.html">home</a></li>
+                <li><a href="hotfood.html">hot foods</a></li>
+                <li><a href=".html">sweets</a></li>
+                <li><a href="backedgoods.html">baked</a></li>
+                <li><a href="healthy.html">healthy foods</a></li>
+                <li><a href="mostfood.html">the most famous cooking programs</a></li>
+                <li><a href="index.html">the most famous food in every country</a></li>
+            </ul>
+        </div> -->
+    <!-- --------------------------------------------------------- ----->
+    
+    <!-- <div class="links_of_our_content">
+      <ul class="links">
+          <li><a href="signin.html">Sign In</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="contactus.html">Contact Us</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+      </ul>
+  </div>
+  <hr> -->
+    <!-- ------------------------------------------------------------ -->
+       <!-- <p class="cr">Copyright &copy; 2021 <span>akalat</span> All Right Reserved.</p> -->
+    <!-- ------------------------------------------------------------ -->
+    <!-- </div> --> 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<!-- Start script code -->
+
+      <script>
+      
+          function changestyle(){
+                document.getElementById("menu").style.display="block";
+                document.getElementById("cancel").style.display="block";
+          }
+          function changestyle2(){
+                document.getElementById("menu").style.display="none";
+                document.getElementById("cancel").style.display="none";
+              // document.getElementById("side bar").style.f="50px";
+          }
+      //---------------------------------------------------------
+          function home(){
+            if ( (user.value === '' || user.value == null) && (pass.value === '' || pass.value == null) ){
+                  document.getElementById("userError").style.display="block";
+                  document.getElementById("passError").style.display="block";
+            }
+            else if (user.value === '' || user.value == null){
+                  document.getElementById("userError").style.display="block";
+                  document.getElementById("passError").style.display="none";
+            }
+            
+            else if (pass.value === '' || pass.value == null){
+                  document.getElementById("passError").style.display="block";
+                  document.getElementById("userError").style.display="none";
+            } 
+            else{
+              document.getElementById("passError").style.display="none";
+              document.getElementById("userError").style.display="none";
+              window.location="index.html";
+            }
+       }
+// -- ---------------------------//
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    // -----------------------------------------
+      </script>
+    </body>
+    </html>

@@ -1,0 +1,319 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* :root{
+    --maincolor:black;
+    ----special: #ff9800;
+    --inputcolor: #eee;
+    --bordercolor: #d20100;
+} */
+:root{
+--words: goldenrod;
+--special: #ff9800;
+--inputcolor: #eee;
+--bordercolor: #d20100;
+}
+body{
+   background-color: black;
+}
+::selection{
+    color: var(--special);
+}
+
+/* navbar */
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+}
+.nav li {
+    float: left;
+    font-size:19px;
+    margin: 0px 0px;
+    padding:2px 0px;
+    border-radius: 0px;
+}
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:sans-serif;
+    margin:0px;
+}
+li a:hover:not(.active) {
+    background-color: orange;
+}
+.active {
+    background-color: #04AA6D;
+}
+/*side bar*/
+
+.menu{
+    list-style:none;
+    padding-left: 0px;
+    width: fit-content; 
+}
+.menu h3{
+   background-color: var(--special);
+    color: black;
+    padding:10px;
+    cursor:pointer;
+    text-align:center;
+}
+.menu li{
+    padding:20px 1px;
+    text-align: center;
+    width: 140px;
+
+}
+.menu a{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;   
+    text-align: center;
+    font-family: cursive;
+    margin-left: 0px;
+}
+.menu li :hover{
+    background-color:#ffa500;
+    text-decoration: none;
+}
+.backed{
+    position: relative;
+    right: 18px
+}
+#sidebar{
+    background: rgb(128 128 128 / 20%);
+    width: fit-content;
+    position: absolute;
+    z-index: 99;
+    margin-left: 9px;
+    border-radius: 9px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border-bottom: 3px groove var(--bordercolor);
+}
+#icon,
+#cancel{
+    width:6%;
+    cursor:pointer;
+    margin:0px 10px;
+}
+#cancel{
+    color: black;
+}
+#icon:hover{
+    color: var(--special);
+}
+#cancel:hover{
+    color: var(--special);
+}
+/* end nav bar */
+h1{
+    text-align: center;
+    font-size: -webkit-xxx-large ;
+    font-style: italic;
+    color: var(--special);
+}
+i{
+    font-size: 30px;
+}
+form::selection {
+    color: var(--bordercolor);
+}
+.signin {
+    text-align: center;
+    margin: auto;
+    margin-top: -34px;
+    font-size: -webkit-xxx-large;
+    margin-bottom: 19px;
+    font-weight: 800;
+}
+.userName{
+    position: relative;
+}
+#userError{
+    margin: 0px;
+    position: absolute;
+    top: 23%;
+    left: 16%;
+    color: var(--bordercolor);
+    opacity: 0.9;
+}
+.pass{
+    position: relative;
+}
+#passError{
+    margin: 0px;
+    position: absolute;
+    top: -10%;
+    left: 16%;
+    color: var(--bordercolor);
+    opacity: 0.9;
+} 
+.signing{
+    background-color: var(--special);
+    opacity: 0.9;
+    color: var(--maincolor);
+    max-width: min-content;
+    height: 422px;
+    margin: 100px auto;
+    border: groove 1px var(--bordercolor) ;
+    border-radius: 14px;
+    padding: 60px;
+    box-shadow: 9px 5px 12px 5px var(--bordercolor) ;
+}
+
+.user{
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-color: var(--bordercolor);
+    margin: 42px 50px 30px;
+    text-align: center;
+    background-color: var(--inputcolor);  
+}
+input:focus{
+    border-radius: 10px;
+    border-color: var(--bordercolor);
+}
+#pass{
+    border-radius: 10px;
+    border-color: var(--bordercolor);    
+    margin: 14px 50px;
+    text-align: center;
+    background-color: var(--inputcolor);
+}
+.ch{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+#signinbtn{
+    margin: 25px 64px 6px 89px;
+    border-radius: 12px;
+    border-color: var(--bordercolor);
+    width: 100px;
+    height: 27px;
+    font-size: large;
+    cursor: pointer;
+}
+#signinbtn:hover{
+    background-color: var(--special);
+    opacity: 0.7;
+}
+a{
+    margin-left: 56px;
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+/* footer */
+/* hr{
+    margin: 0px;
+    background-color: var(--bordercolor);
+    border: 0px;
+    height: 1px;
+} */
+/* .footer{
+    background-color: rgb(128 128 128 / 20%);
+    /* background-color: rgb(128, 128, 128, 0.452); */
+    /* color: var(--special);
+    text-align: center;
+    position: relative;
+    margin-top: 290px;
+}
+ul{
+    list-style: none;
+}
+.links_of_content{
+    max-width: fit-content;
+    display: inline;
+}
+.links_of_content .links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;  
+}
+.links_of_content .links li{
+    padding-bottom: 10px;
+    font-family: cursive;
+    text-indent: -45px;
+    text-transform: capitalize;
+}
+.links_of_content .links a{
+   text-decoration-color: var(--bordercolor);
+}
+.links_of_our_content .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.links_of_our_content a{
+    text-decoration: none;
+}
+.links_of_our_content a:hover{
+    border-left: 2px solid var(--bordercolor);
+    border-right: 2px solid var(--bordercolor);
+    padding: 3px;
+}
+.cat{
+    border-left: 5px solid var(--bordercolor);
+    padding-left: 5px;
+    margin-bottom: 5px;
+    font-size: x-large;
+    font-family: serif ;
+}
+.icons_section{
+    padding-top: 1px;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+}
+.icons ul{
+    padding-top: 3px;
+}
+span:not(.cat){
+    text-transform: uppercase;
+}
+.cr{
+    margin: 0px; 
+    }*/
+#myBtn {
+    display: none;
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    
+    background-color: black;
+    color: white; 
+    cursor: pointer; 
+    padding: 15px;
+    border-color: var(--bordercolor);
+    border-radius: 10px; 
+    font-size: 10px; 
+    opacity: 0.5;
+  }
+  
+  #myBtn:hover {
+    background-color: var(--bordercolor); 
+    opacity: 1;
+  }

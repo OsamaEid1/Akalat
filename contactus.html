@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>contact us</title>
+    <link rel="stylesheet" href="css/contactus.css">
+    <link rel="stylesheet" href="css/all.min.css"> <!-- declare file of font icon -->
+
+</head>
+<body>
+      <h3>Abdelrahman shreif mahmoud..ID=202000516</h3>
+
+<!-- nav bar -->
+          <ul class="nav">
+              <li>
+              <div id="icon" onclick="changestyle()">
+                <i class="fas fa-bars fa-2x"></i>
+              </div>
+                </li>
+              <div id="cancel" style="display: none; cursor: pointer;" onclick="changestyle2()">
+                <i class="fas fa-window-close"></i>
+              </div>
+              </li>
+              <li class="nav"><a href="index.html">Home</a></li>
+              <li class="nav"><a href="signin.html">Sign in</a></li>
+              <li class="nav"><a href="signup.html">Sign up</a></li>
+              <li class="nav"><a href="contactus.html">Contact us</a></li>
+              <li class="nav"><a href="aboutus.html">About us</a></li>
+          </ul>
+
+      <div id="sidebar">
+          <ul class="menu" id="menu" style="display:none;">
+              <h3>Akalat</h3>
+              <li><div><a href="hotfood.html">Hot food</a></div></li>
+              <li><div><a href="backedgoods.html">Backed goods</a></div></li>
+              <li><div><a href="sweets.html">Sweets</a></div></li>
+              <li><div><a href="healthy.html">Healthy food</a></div></li>
+              <li><div><a href="mostfood.html">Most famous food in every country</a></div></li>
+              <li><div><a href="mostprogram.html">Most Famous cooking Programs</a></div></li>
+          </ul>
+      </div>
+      <!-- End nav bar -->
+                              <h3 style="color: red">Abdelrahman shreif..ID=202000516</h3>
+
+    <div class="container">
+        <h1>Connect with us</h1>
+        <p>We would love to respond to your queries and help you succeed.<br/> 
+        feel free to get in touch with us.</p>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>sent your request</h3>
+                <form>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>name</label>
+                            <input type="text" placeholder="Akalat" required>
+                            <!-- <span id="nameError">Please Enter Your name</span> -->
+                        </div>
+                        <div class="input-group">
+                            <label>phone</label>
+                            <input type="text" placeholder="+20 11 420 147 69" required>
+                        </div>
+                    </div>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>email</label>
+                            <input type="email" placeholder="Akalat@gmail.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label>subject</label>
+                            <input type="text" placeholder="recipes" required>
+                        </div>
+                    </div>
+                    <label>message</label>
+                    <textarea rows="5" placeholder="your message"></textarea>
+                    <button class="send" type="submit">send</button>
+                </form>
+            </div>
+            <div class="contact-right">
+                <h3>reach us</h3>
+                <table>
+                    <tr>
+                        <td>email</td>
+                        <td>contactus@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>phone</td>
+                        <td> 012 345  147 69 </td>
+                    </tr>
+                    <tr>
+                        <td>address</td>
+                        <td>#212, grounf floor, 7th cross<br/>
+                        some layout, some road, koromangla<br/>
+                        benegaluru 560001
+                        </td>
+                    </tr>
+                </table>
+            </div>
+           
+
+    </div>
+    </div>
+ <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+        
+        
+        
+        //    -----------------------------
+              //Get the button:
+             mybutton = document.getElementById("myBtn");
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+            }
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+            
+                        function changestyle(){
+                document.getElementById("menu").style.display="block";
+                document.getElementById("cancel").style.display="block";
+          }
+          function changestyle2(){
+                document.getElementById("menu").style.display="none";
+                document.getElementById("cancel").style.display="none";
+              // document.getElementById("side bar").style.f="50px";
+          }
+    </script>
+
+</body>
+</html>

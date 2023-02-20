@@ -1,0 +1,444 @@
+﻿ <!DOCTYPE html>
+<html>
+ <head>
+         <link rel="stylesheet" href="css/all.min.css"> <!-- declare file of font icon -->
+
+ <style>
+   div.relative {
+  position: relative;
+  left: 100px;
+  right: 300px;
+ background-color: black;
+ color:rgb(255, 255, 54);
+} 
+
+
+.continer{
+ width:600px
+ margin:auto
+background-color: black;
+}
+
+h1 {
+  background-color: black;
+  color: orange;
+  font-family: "Audiowide", sans-serif;
+
+} 
+
+
+h2 {
+  background-color: black;
+  color: orange;
+font-family:Serif;
+font-size:25px;
+}
+
+h3 {
+  background-color: black;
+  color: orange;
+font-family:Serif;
+ font-size:25px;
+}
+
+h4{
+  background-color: black;
+  color: orange;
+font-family:Serif;
+ font-size:25px;
+}
+
+
+.p4{
+  background-color: black;
+  color:rgb(255, 255, 54);
+ font-family:Sans-serif;
+
+
+
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 9999;
+  padding: 6px;
+  background: #ffd;
+  border: 1px #886 solid;
+  border-radius: 5px;
+}
+
+ p {
+  position: relative;
+  left: 100px;
+  right: 300px;
+  line-height: 2;
+ font-family:Sans-serif;
+ font-size: 20px;
+color:orange;
+}
+.p4 { 
+  position: relative;
+  left: 100px;
+  right: 300px;
+ font-size:10px;
+ font-family:Sans-serif;
+}
+
+.p2 {
+  position: relative;
+  left: 100px;
+  right: 300px;
+color:rgb(255, 255, 0 );
+  font-family:courier;
+ font-size:15px;
+
+}
+
+ul{
+  list-style-type: square;
+}
+
+button:not(#myBtn){
+  background-color: yallow
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+:root{
+    --words: goldenrod;
+    --special: #ff9800;
+    --inputcolor: #eee;
+    --bordercolor: #d20100;
+    }
+
+.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #333;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+}
+.nav li {
+    float: left;
+    font-size:19px;
+    margin: 0px 0px;
+    padding:2px 0px;
+    border-radius: 0px;
+    color: black;
+}
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family:sans-serif;
+    margin:0px;
+}
+
+li a:hover:not(.active) {
+    background-color: orange;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+/*side bar*/
+.hide,
+.show{
+    width:250px;
+    height:700px;
+    position:relative;
+    float: left;
+    transition:all 3s;
+    background-color:2220.8;
+    font-family:cursive;
+    left:-260px;
+}
+.show{
+    left:0px;
+}
+.menu{
+    list-style:none;
+    color: white;
+    padding-left: 0px
+}
+.menu h3{
+   background-color: var(--special);
+    color: black;
+    padding:10px;
+    cursor:pointer;
+    text-align:center;
+}
+.menu li{
+    padding:20px 1px;
+    text-align: center;
+    width: 140px;
+
+}
+.menu a{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;   
+    text-align: center;
+    font-family: cursive;
+}
+.menu li :hover{
+    background-color: #ffa500;
+   
+}
+#sidebar{
+    background-color: #333;
+    color: black;
+    width: fit-content;
+    position: absolute;
+    z-index: 99;
+    margin-left: 9px;
+    border-radius: 9px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border-bottom: 3px groove var(--bordercolor);
+}
+#icon,
+#cancel{
+    cursor:pointer;
+    margin:0px 10px;
+}
+#cancel{
+    color: black;
+    font-size: 30px;
+}
+#icon:hover{
+    color: var(--special);
+}
+#cancel:hover{
+    color: var(--special);
+}
+/* end nav bar */
+#myBtn{
+    display: none;
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99;
+    background-color: black;
+    color: white; 
+    cursor: pointer; 
+    padding: 15px;
+    border-color: var(--bordercolor);
+    border-radius: 10px; 
+    font-size: 10px; 
+    opacity: 0.5;
+}
+ #myBtn:hover {
+    background-color: var(--bordercolor); 
+    opacity: 1;
+  }
+ </style> 
+ <title>link </title>
+ </head>
+<body style="background-color:black;"> 
+<!-- nav bar -->
+          <ul class="nav">
+              <li>
+              <div id="icon" onclick="changestyle()">
+                <i class="fas fa-bars fa-2x"></i>
+              </div>
+                </li>
+              <div id="cancel" style="display: none; cursor: pointer;" onclick="changestyle2()">
+                <i class="fas fa-window-close"></i>
+              </div>
+              </li>
+              <li class="nav"><a href="index.html">Home</a></li>
+              <li class="nav"><a href="signin.html">Sign in</a></li>
+              <li class="nav"><a href="signup.html">Sign up</a></li>
+              <li class="nav"><a href="contactus.html">Contact us</a></li>
+              <li class="nav"><a href="aboutus.html">About us</a></li>
+          </ul>
+
+      <div id="sidebar">
+          <ul class="menu" id="menu" style="display:none;">
+              <h3>Akalat</h3>
+              <li><div><a href="hotfood.html">Hot food</a></div></li>
+              <li><div><a href="backedgoods.html">Backed goods</a></div></li>
+              <li><div><a href="sweets.html">Sweets</a></div></li>
+              <li><div><a href="healthy.html">Healthy food</a></div></li>
+              <li><div><a href="mostfood.html">Most famous food in every country</a></div></li>
+              <li><div><a href="mostprogram.html">Most Famous cooking Programs</a></div></li>
+          </ul>
+      </div>
+      <!-- End nav bar -->
+      <h3>Hazem hany..ID=202000252</h3>
+
+<div class="relative">
+<div class="continer">
+
+  <h1 style="text-align:center;border:1px solid ;">  <ins>Important channels</ins> </h1>
+<img src="images/pnc.jpeg"style="width:900px;height:500px;position: relative;left: 100px;right: 300px;">
+  <h2 style="text-align:center;"> <strong><ins> PNC FOOD </ins></strong> </h2>
+
+<br><button type="button"class="but2"onclick="myFunction4()">Channel Frequency</button></br>
+
+<div id="a4">
+  <ul >
+  <li> Frequency:12431</li>
+  <li>codec rate:</li>
+  <li> polarization</li>
+  <li></li>
+  <li></li>
+  <li> </li>
+</ul>
+</div>
+
+<script>
+function myFunction4() {
+  var x = document.getElementById("a4");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+
+}
+</script>
+
+<h4><ins>2.SAMIRA TV</ins></h4>
+
+<img src="images/SAM.png"style="width:900px;height:500px;relative;left: 100px;right: 300px;">
+<br><button type="button"class="but2"onclick="myFunction3()">Channel Frequency</button></br>
+
+<div id="a3">
+  <ul >
+  <li> Frequency;</li>
+  <li>codec rate:</li>
+  <li> polarization</li>
+  <li>.</li>
+  <li>;</li>
+  <li>. </li>
+  <li>.</li>
+  <li></li>
+</ul>
+</div>
+
+<script>
+
+function myFunction3() {
+  var x = document.getElementById("a3");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+</script>
+<div>
+ <button type="button"class="but2"onclick="documentById('p5').style.display=' block'">show</button>
+</div>
+
+<h4><ins>3.CBC COFRA TV</ins></h4>
+<img src="images/CBCjpeg.jpeg"style="width:900px;height:500px;relative;left: 100px;right: 300px;">
+
+ <br><button type="button"class="but2"onclick="myFunction2()">Channel Frequency</button></br>
+
+<div id="a2">
+
+  <ul >
+  
+  <li>Frequency:</li>
+  <li>codec rate: </li>
+  <li>polarization </li>
+  <li> </li>
+  <li></li>
+  <li> </li>
+  <li> </li>
+  <li> </li>
+</ul>
+</div> 
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<script>
+function myFunction2() {
+  var x = document.getElementById("a2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+ //Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+  
+                  function changestyle(){
+                document.getElementById("menu").style.display="block";
+                document.getElementById("cancel").style.display="block";
+          }
+          function changestyle2(){
+                document.getElementById("menu").style.display="none";
+                document.getElementById("cancel").style.display="none";
+              // document.getElementById("side bar").style.f="50px";
+          } 
+</script>
+
+<h4><ins>4.TASTY TV</ins></h4>
+
+<img src="images/tasty.jpeg"style="width:900px;height:500px;relative;left: 100px;right: 300px;">
+
+ <p><span style="color:blue">blue</span> eyes.</p> 
+ 
+<br><button type="button"class="but2"onclick="myFunction()">Channel Frequency</button></br>
+
+<div id="a">
+  <ul >
+  
+  <li>Frequency:</li>
+  <li>codec rate:</li>
+  <li> polarization</li>
+  <li> </li>
+  <li> </li>
+  <li> </li>
+  <li></li>
+  <li>  </li>
+</ul>
+</div> 
+<script>
+
+function myFunction() {
+  var x = document.getElementById("a");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+} 
+</script>
+ 
+</pr>
+</div>
+</body>
+</html>
+
